@@ -79,13 +79,32 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1,支持向量机SVM1.1线性分类1.2最大间隔分类器1.3拉格朗日对偶问题在我们学高数的时候，都知道那个熟的不能在熟的“拉格朗日乘数法”了，但我知道，除了考研党们，大部分的人估计也忘的差不多了，现在简单回忆一下。 ————复习拉格朗日乘数法———— 假设我们要求f(x)的最小值，约束条件是h(x)=0，即： Min f(x) s.t hi(x)=0,i=1,2…n 那么可以引入拉格朗日算子a，构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习.md">
+<meta property="og:url" content="http://yoursite.com/2019/09/24/机器学习/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1,支持向量机SVM1.1线性分类1.2最大间隔分类器1.3拉格朗日对偶问题在我们学高数的时候，都知道那个熟的不能在熟的“拉格朗日乘数法”了，但我知道，除了考研党们，大部分的人估计也忘的差不多了，现在简单回忆一下。 ————复习拉格朗日乘数法———— 假设我们要求f(x)的最小值，约束条件是h(x)=0，即： Min f(x) s.t hi(x)=0,i=1,2…n 那么可以引入拉格朗日算子a，构">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=F%28x%2Ca%29+%3D+f%28x%29+-+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Ba%5Ccdot+h_%7Bi%7D%28x%29%7D">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-f6f4876894b8be629861d175fd86a963_hd.png">
+<meta property="og:image" content="https://www.zhihu.com/equation?tex=C%28w%29%3D%5Cmax_%7Ba_%7Bi%7D%3E0%7DF%28w%2Cb%2Ca%29">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c6754f0203545245ecf1a2c4abf63ae4_hd.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-793fc59a17030a0e860d94dcad1e6256_hd.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-c067190b3b28e06cffe84064ecc6a4fa_hd.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-617e6257e7dae74ea0d92410f8211b22_hd.png">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-93ae702f8536e56fe3b1a4d6e73f782f_hd.png">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-025c597839e2e4f9bf6b861a7251cd77_hd.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-1b0c1b22fe2ad85d9c13b1e4d2b9673e_hd.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-a98ba838d4720e2037a04a96fb5293da_hd.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-85346498d55a0a4ecbe4b9f78246305a_hd.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-abcfd61d03c272045920e98c22aaff78_hd.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-3dac84c2edd9f279ac72a5679e5b0268_hd.png">
+<meta property="og:updated_time" content="2019-09-24T06:51:45.673Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="机器学习.md">
+<meta name="twitter:description" content="1,支持向量机SVM1.1线性分类1.2最大间隔分类器1.3拉格朗日对偶问题在我们学高数的时候，都知道那个熟的不能在熟的“拉格朗日乘数法”了，但我知道，除了考研党们，大部分的人估计也忘的差不多了，现在简单回忆一下。 ————复习拉格朗日乘数法———— 假设我们要求f(x)的最小值，约束条件是h(x)=0，即： Min f(x) s.t hi(x)=0,i=1,2…n 那么可以引入拉格朗日算子a，构">
+<meta name="twitter:image" content="https://www.zhihu.com/equation?tex=F%28x%2Ca%29+%3D+f%28x%29+-+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Ba%5Ccdot+h_%7Bi%7D%28x%29%7D">
 
 
 
@@ -115,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/24/机器学习/">
 
 
 
 
 
-  <title>Hexo</title>
+  <title>机器学习.md | Hexo</title>
   
 
 
@@ -140,8 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,9 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/24/机器学习/" itemprop="url">机器学习.md</a></h1>
+          <h1 class="post-title" itemprop="name headline">机器学习.md</h1>
         
 
         <div class="post-meta">
@@ -318,9 +334,7 @@
       
 
       
-        
-          
-            <h1 id="1-支持向量机SVM"><a href="#1-支持向量机SVM" class="headerlink" title="1,支持向量机SVM"></a>1,支持向量机SVM</h1><h2 id="1-1线性分类"><a href="#1-1线性分类" class="headerlink" title="1.1线性分类"></a>1.1线性分类</h2><h2 id="1-2最大间隔分类器"><a href="#1-2最大间隔分类器" class="headerlink" title="1.2最大间隔分类器"></a>1.2最大间隔分类器</h2><h2 id="1-3拉格朗日对偶问题"><a href="#1-3拉格朗日对偶问题" class="headerlink" title="1.3拉格朗日对偶问题"></a>1.3拉格朗日对偶问题</h2><p>在我们学高数的时候，都知道那个熟的不能在熟的“拉格朗日乘数法”了，但我知道，除了考研党们，大部分的人估计也忘的差不多了，现在简单回忆一下。</p>
+        <h1 id="1-支持向量机SVM"><a href="#1-支持向量机SVM" class="headerlink" title="1,支持向量机SVM"></a>1,支持向量机SVM</h1><h2 id="1-1线性分类"><a href="#1-1线性分类" class="headerlink" title="1.1线性分类"></a>1.1线性分类</h2><h2 id="1-2最大间隔分类器"><a href="#1-2最大间隔分类器" class="headerlink" title="1.2最大间隔分类器"></a>1.2最大间隔分类器</h2><h2 id="1-3拉格朗日对偶问题"><a href="#1-3拉格朗日对偶问题" class="headerlink" title="1.3拉格朗日对偶问题"></a>1.3拉格朗日对偶问题</h2><p>在我们学高数的时候，都知道那个熟的不能在熟的“拉格朗日乘数法”了，但我知道，除了考研党们，大部分的人估计也忘的差不多了，现在简单回忆一下。</p>
 <p>————<em>复习拉格朗日乘数法</em>————</p>
 <p>假设我们要求f(x)的最小值，约束条件是h(x)=0，即：</p>
 <p>Min f(x)</p>
@@ -394,8 +408,6 @@
 <p>所以这里logit变换形式为：<br>$$<br>log(\dfrac{P(Y=k|x)}{P(Y=K|x)})=w_k·x<br>$$<br>由于对于$Y$从$k$到$K-1$都有以上的式子，所以$w$也是有$K-1$个$w$，所以求了$K-1$个$w$参数向量。</p>
 <p><strong>所以对于多分类的问题参数向量有$K-1$个。</strong></p>
 <h1 id="3-LR和SVM"><a href="#3-LR和SVM" class="headerlink" title="3.LR和SVM"></a>3.LR和SVM</h1>
-          
-        
       
     </div>
     
@@ -412,12 +424,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -427,10 +439,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -438,6 +451,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -458,8 +475,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -501,6 +527,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-支持向量机SVM"><span class="nav-number">1.</span> <span class="nav-text">1,支持向量机SVM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1线性分类"><span class="nav-number">1.1.</span> <span class="nav-text">1.1线性分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2最大间隔分类器"><span class="nav-number">1.2.</span> <span class="nav-text">1.2最大间隔分类器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3拉格朗日对偶问题"><span class="nav-number">1.3.</span> <span class="nav-text">1.3拉格朗日对偶问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-逻辑斯谛回归模型"><span class="nav-number">2.</span> <span class="nav-text">2.逻辑斯谛回归模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1二分类logsitc回归模型推导"><span class="nav-number">2.1.</span> <span class="nav-text">2.1二分类logsitc回归模型推导</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2多分类logistic回归模型"><span class="nav-number">2.2.</span> <span class="nav-text">2.2多分类logistic回归模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-LR和SVM"><span class="nav-number">3.</span> <span class="nav-text">3.LR和SVM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -641,6 +683,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
