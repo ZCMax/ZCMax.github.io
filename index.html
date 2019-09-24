@@ -344,56 +344,7 @@
 <p><img src="https://pic3.zhimg.com/80/v2-617e6257e7dae74ea0d92410f8211b22_hd.png" alt="img"></p>
 <p>这个不等式有一个很装逼的名字，叫<strong>弱对偶性质（Week Duality）</strong>，最大值中最小的一个，也要大于等于最小值中最大的一个。这个性质从常识上想想，也是可以理解的。同时，我们可以得到一个<strong>对偶间隙</strong>，即p<em>-d</em>。</p>
 <p>话说回来，如果我们这里恰好能够取等号，即对偶间隙消失就好了。</p>
-<p>说到这里数说君要感慨一下这世界上的诸多“定理”、“条件”们，平时读书的时候被这些狗屁定理定律条件折磨的死去活来，真正要用的时候才觉得，发现这些定理的大神们真真儿的是救星啊~！</p>
-<p>现在就要说一个定理，来拯救我们于水火：</p>
-<p>在凸优化理论中，有一个Slater定理，当这个定理满足，那么对偶间隙就会消失，即：</p>
-<p><img src="https://pic4.zhimg.com/80/v2-93ae702f8536e56fe3b1a4d6e73f782f_hd.png" alt="img"></p>
-<p>此时称为<strong>强对偶性质（strong Duality）</strong>。幸运的是，我们这里满足Slater定理。</p>
-<p>什么是Slater定理？感兴趣的可以了解一下，但我个人认为这对下一步的学习不重要。</p>
-<p>————<em>Slater定理（不重要）</em>————</p>
-<p>若凸优化问题存在严格可行解，即存在x，满足</p>
-<p><img src="https://pic4.zhimg.com/80/v2-025c597839e2e4f9bf6b861a7251cd77_hd.png" alt="img"></p>
-<p>则优化问题具有强对偶性（原问题中的不等式约束是f(x) ≤ 0）。</p>
-<p><strong>Slater定理其实就是说，存在x，使不等式</strong> <strong>约束中的“小于等于号”要严格取到“小于号”</strong>。</p>
-<p>————<em>Slater定理（不重要）</em>————</p>
-<p>好啦，现在Slater定理满足，我们有p<em>= d*，但是还不行，为什么？因为p</em> 和d<em>可能都有不止一个解，我们得保证p</em> = d*的解为最优解才行——怎能办？麻烦还没解决。别急，下面一个“KKT条件”的东东可以帮助我们。</p>
-<p>————<em>KKT条件</em>————</p>
-<p>怎样才能满足呢KKT条件呢？KKT条件又是什么呢？很简单，以我们这里的问题为例，怎样才能满足KKT条件？</p>
-<p>——当满足Slater条件、且F(w,b,a)对w和b都可微时，KKT条件满足；</p>
-<p>KKT条件又是什么？</p>
-<p>——该条件如下：</p>
-<p>①</p>
-<p>②</p>
-<p><strong>也就是说，p*</strong> <strong>=d*的解即为最优解。</strong></p>
-<p>————<em>KKT条件</em>—————</p>
-<p>咦？是不是图片显示不了呀？怎么①②后面都是空白？</p>
-<p>实际上我故意留空的，不想把东西弄复杂。各位观众只要知道我们这里KKT条件是满足的，然后KKT条件的内容可以决定我们的问题为最优解就好了，至于KKT条件到底是什么，我留在下几集再说，因为这个条件可以帮助我们简化求解。这里写出来后会破坏文章的美感。</p>
-<p>下面我们就彻底抛开p<em>，只研究d</em>就可以了。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-1b0c1b22fe2ad85d9c13b1e4d2b9673e_hd.png" alt="img"></p>
-<p>首先我们固定a，让F关于w和b最小化，老办法，对w和b求导：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-a98ba838d4720e2037a04a96fb5293da_hd.png" alt="img"></p>
-<p>然后带入到F(w,b,a)中去，</p>
-<p><img src="https://pic3.zhimg.com/80/v2-85346498d55a0a4ecbe4b9f78246305a_hd.png" alt="img"></p>
-<p>接着，我们可以求对a的极大了，也就是说，我们剩下的问题仅仅剩下：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-abcfd61d03c272045920e98c22aaff78_hd.png" alt="img"></p>
-<p>下一步，我们就要求这个问题，得到a的值，进而就可以知道w和b的值了。</p>
-<p>那么这个a怎么解？这是我们后面要讲的了——<strong>SMO高效优化算法</strong>。</p>
-<p><strong>4.</strong> <strong>总结</strong></p>
-<p>我们完善一下前面的那张流程图，得到本文的一个大纲：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-3dac84c2edd9f279ac72a5679e5b0268_hd.png" alt="img"></p>
-<h1 id="2-逻辑斯谛回归模型"><a href="#2-逻辑斯谛回归模型" class="headerlink" title="2.逻辑斯谛回归模型"></a>2.逻辑斯谛回归模型</h1><h2 id="2-1二分类logsitc回归模型推导"><a href="#2-1二分类logsitc回归模型推导" class="headerlink" title="2.1二分类logsitc回归模型推导"></a>2.1二分类logsitc回归模型推导</h2><p>我们希望给定一个$x$,可以通过$P(y=1|x)=\pi(x)$找到其类别的概率分布情况从而进行分类，但是由于其为一个概率，所以$\pi(x)\in[0,1]$。</p>
-<p>我们希望通过$x$的线形模型$wx$这样的线性函数去刻画$\pi(x)$的特征。而$ wx\in(-\infty,+\infty)$, 我们需要找到<br>$$<br>P(y=1|x)=\pi(x)\in[0,1]\longleftrightarrow w·x\in(-\infty,+\infty)<br>$$<br>之间的对应关系。</p>
-<p><strong>这里用到的变化就是logit变换</strong><br>$$<br>logit(\pi(x))=log(\dfrac{\pi(x)}{1-\pi(x)})\in(-\infty,+\infty)<br>$$<br>所以有：<br>$$<br>log(\dfrac{\pi(x)}{1-\pi(x)})=w·x<br>$$<br>可以解出：<br>$$<br>\pi(x)=\dfrac{exp(w·x)}{1+exp(w·x)}<br>$$<br>从而推出了logistic回归模型的形式：<br>$$<br>二项logistic回归模型:<br>P(Y=1|x)=\dfrac{exp(w·x)}{1+exp(w·x)}<br>$$<br>接下来如何求$w$?   =&gt; 模型参数估计：极大似然估计</p>
-<p>【如果$P(Y=1)|x)&gt;0.5$则判断为1，否则判定为0】</p>
-<p>对于N个样本${(x_1,y_1),(x_2,y_2),(x_3,y_3)…}$，似然函数为：<br>$$<br>L(w)=\prod_{i=1}^N\pi(x_i)^{y_i}[1-\pi(x_i)]^{1-y_i}<br>$$</p>
-<p>$$<br>maxL(w)=&gt;maxlnL(w)<br>$$</p>
-<p>对数似然函数为：<br>$$<br>lnL(w)=\sum_1^N[y_ilog(\pi(x_i))+(1-y_i)log(1-\pi(x_i))]<br>$$<br>带入$\pi(x)$的表达式有：<br>$$<br>lnL(w)=\sum_1^N[y_i(w·x_i)-log(1+exp(w·x_i))]<br>$$<br><strong>如何解这个式子我们采用梯度下降法，由于找的是最大值，所以需要向正梯度方向更新</strong></p>
-<p>从而找到$w$的极大似然估计值.从而找到<strong>二分类logistc回归模型</strong></p>
-<h2 id="2-2多分类logistic回归模型"><a href="#2-2多分类logistic回归模型" class="headerlink" title="2.2多分类logistic回归模型"></a>2.2多分类logistic回归模型</h2><p>$$<br>P(Y=k|x)=\dfrac{exp(w_k·x)}{1+\sum_{k=1}^{K-1}exp(w_k·x)} ,k=1,2,…,K-1<br>$$</p>
-<p>$$<br>P(Y=K|x)=\dfrac{1}{1+\sum_{k=1}^{K-1}exp(w_k·x)}<br>$$</p>
-<p>所以这里logit变换形式为：<br>$$<br>log(\dfrac{P(Y=k|x)}{P(Y=K|x)})=w_k·x<br>$$<br>由于对于$Y$从$k$到$K-1$都有以上的式子，所以$w$也是有$K-1$个$w$，所以求了$K-1$个$w$参数向量。</p>
-<p><strong>所以对于多分类的问题参数向量有$K-1$个。</strong></p>
-<h1 id="3-LR和SVM"><a href="#3-LR和SVM" class="headerlink" title="3.LR和SVM"></a>3.LR和SVM</h1>
+
           
         
       
